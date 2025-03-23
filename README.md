@@ -23,6 +23,14 @@ curl -X POST -H "Content-Type: application/json" -d '{"text":"This is awesome!"}
   "hash": "afeebf7d3e26a9ebe629b46ad02f906f5774f91704867dbe90e9f9aea089a630", 
   "message": "Prediction stored"
 }
+
+curl -X POST -H "Content-Type: application/json" -d '{"text":"This is badddd!"}' http://localhost:5000/predict
+{
+  "block_index": 4, 
+  "data": "Prediction: NEGATIVE (confidence: 1.00)", 
+  "hash": "43b34c2ebf103fa6e5d58748d1831f4f0e84559a17e4585b81cd771c7305e258", 
+  "message": "Prediction stored"
+}
 ```
 ### Example-2
 ```
@@ -31,18 +39,23 @@ curl http://localhost:5000/chain
   "chain": [
     {
       "data": "Genesis Block", 
-      "hash": "e92f41ef0874c4e2f82d78b6cab921bb5fee1601c38ab4dbcfd21c8189b7d44f", 
+      "hash": "5711534b2cf297d77e8e27dd719ffa75ae047e17ecfdc88c7fb008fe93d122dc", 
       "index": 0
     }, 
     {
       "data": "Prediction: POSITIVE (confidence: 1.00)", 
-      "hash": "a06a865b1dc9befd784f79be7832da727537c73d3ac02658765a0b4156abfa49", 
+      "hash": "4a54362cd739768539af636eb306d980f3e6f03188a2e41f8b37b5ff55537a4b", 
       "index": 1
     }, 
     {
       "data": "Prediction: POSITIVE (confidence: 1.00)", 
-      "hash": "afeebf7d3e26a9ebe629b46ad02f906f5774f91704867dbe90e9f9aea089a630", 
+      "hash": "e25f36bb028680f09303c6f1e7c1514fb5e9030734783ee0054f991c7a56558f", 
       "index": 2
+    }, 
+    {
+      "data": "Prediction: NEGATIVE (confidence: 1.00)", 
+      "hash": "81ce4798ef8cfd806024a798b081626daae5ff7e747ac6b1cd0e319800899aec", 
+      "index": 3
     }
   ], 
   "valid": true
