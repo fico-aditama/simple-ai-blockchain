@@ -14,15 +14,19 @@ A simple project combining AI and blockchain. Uses a pre-trained sentiment model
 
 
 ## Example
-- curl -X POST -H "Content-Type: application/json" -d '{"text":"This is awesome!"}' http://localhost:5000/predict
+### Example-1
+```
+curl -X POST -H "Content-Type: application/json" -d '{"text":"This is awesome!"}' http://localhost:5000/predict
 {
   "block_index": 2, 
   "data": "Prediction: POSITIVE (confidence: 1.00)", 
   "hash": "afeebf7d3e26a9ebe629b46ad02f906f5774f91704867dbe90e9f9aea089a630", 
   "message": "Prediction stored"
 }
-
-- curl http://localhost:5000/chain
+```
+### Example-2
+```
+curl http://localhost:5000/chain
 {
   "chain": [
     {
@@ -43,3 +47,4 @@ A simple project combining AI and blockchain. Uses a pre-trained sentiment model
   ], 
   "valid": true
 }
+```
